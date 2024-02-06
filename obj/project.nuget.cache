@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "YP7aX/+Oer4twuHRx+LOXlyhEfSJMYiU9iXUEi66ctAY7A39yv7+zm5C/66qkOko7eIbWksWZFUP3O4uHPP01A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\joeli\\Main\\Desktop\\Projects\\C#\\GameStore\\GameStore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joeli\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\joeli\\.nuget\\packages\\minimalapis.extensions\\0.11.0\\minimalapis.extensions.0.11.0.nupkg.sha512",
+    "C:\\Users\\joeli\\.nuget\\packages\\minivalidation\\0.8.0\\minivalidation.0.8.0.nupkg.sha512"
+  ],
+  "logs": []
+}
