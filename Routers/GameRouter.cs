@@ -4,16 +4,16 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using GameStore.Data.DataTransferObjects;
+using GameStore.Properties;
 using GameStore.Repositries;
 using Microsoft.AspNetCore.Components;
 using web.Entities;
-
+using GameStore.Properties.RouterConstants;
 namespace GameStore.Routers
 {
     public static class GameRouter
     {
 
-        private const string GamesGetEndpoint = "GetGames";
 
         public static RouteGroupBuilder MapGamesEndpoint(this IEndpointRouteBuilder builder){
             //instatntiations
@@ -32,7 +32,7 @@ namespace GameStore.Routers
                     Game ?game = repository.Get(id);
                     return game is not null ? Results.Ok(game) : Results.NotFound();
                 }
-            ).WithName(GamesGetEndpoint);
+            ).WithName(GameStoreConstants.GamesGetEndpoint);
 
             RouteGroup.MapPut(
                 "/{id}",
@@ -40,7 +40,7 @@ namespace GameStore.Routers
                     repository.Update(game);
                     
                     return Results.AcceptedAtRoute(
-                        GamesGetEndpoint,
+                        GameStoreConstants.GamesGetEndpoint,
                         new { id = game.Id },
                         game
                     );
@@ -54,7 +54,8 @@ namespace GameStore.Routers
                     repository.Create(gameDTO);
 
                     return Results.AcceptedAtRoute(
-                        GamesGetEndpoint,
+                        GameStoreConstants
+                        .GamesGetEndpoint,
                         new {id=repository.GetAll().Count()},
                         repository.Get(repository.GetContainerLength())
                     );
