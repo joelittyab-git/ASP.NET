@@ -29,3 +29,4 @@ C:\Users\joeli\Main\Desktop\Projects\C#\GameStore\bin\Debug\net8.0\MiniValidatio
 C:\Users\joeli\Main\Desktop\Projects\C#\GameStore\obj\Debug\net8.0\GameStore.csproj.AssemblyReference.cache
 C:\Users\joeli\Main\Desktop\Projects\C#\GameStore\obj\Debug\net8.0\GameStore.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\joeli\Main\Desktop\Projects\C#\GameStore\obj\Debug\net8.0\GameStore.csproj.CopyComplete
+C:\Users\joeli\Main\Desktop\Projects\C#\GameStore\obj\Debug\net8.0\GameStore.sourcelink.json
