@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
+using GameStore.Data.DataTransferObjects;
 using GameStore.Data.Entities;
 using web.Entities;
 
@@ -55,6 +57,18 @@ namespace GameStore.Repositries
             games.Add(game);
         }
 
+        public void Create(CreateGameDTO gameDTO){
+            Game game = new Game(){
+                Id = games.Count+1,
+                Name = gameDTO.Name,
+                Genre = [.. gameDTO.Genre],
+                ReleaseDate = gameDTO.ReleaseDate,
+                Price = gameDTO.Price,
+                ImageUri = gameDTO.ImageUri
+            };
+            games.Add(game);
+        }
+
         public void Update(Game updatedgame){
             int index = games.FindIndex(game=>game.Id==updatedgame.Id);
             games[index] = updatedgame;
@@ -63,6 +77,10 @@ namespace GameStore.Repositries
         public void Delete(int id){
             int index = games.FindIndex(game=>game.Id==id);
             games.RemoveAt(index);
+        }
+
+        public int GetContainerLength(){
+            return games.Count();
         }
     }
 }

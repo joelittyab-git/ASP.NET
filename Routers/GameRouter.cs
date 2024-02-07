@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using GameStore.Data.DataTransferObjects;
 using GameStore.Repositries;
 using Microsoft.AspNetCore.Components;
 using web.Entities;
@@ -48,14 +49,14 @@ namespace GameStore.Routers
 
             RouteGroup.MapPost(
                 "/",
-                (IGamesRepository repository, Game game) => {
+                (IGamesRepository repository, CreateGameDTO gameDTO) => {
                     
-                    repository.Create(game);
+                    repository.Create(gameDTO);
 
                     return Results.AcceptedAtRoute(
                         GamesGetEndpoint,
                         new {id=repository.GetAll().Count()},
-                        game
+                        repository.Get(repository.GetContainerLength())
                     );
                 }
             );
