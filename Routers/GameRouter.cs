@@ -1,12 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using GameStore.Data.DataTransferObjects;
-using GameStore.Properties;
 using GameStore.Repositries;
-using Microsoft.AspNetCore.Components;
 using web.Entities;
 using GameStore.Properties.RouterConstants;
 namespace GameStore.Routers
